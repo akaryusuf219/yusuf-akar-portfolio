@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yusuf Akar - 19 Mayıs Mesleki ve Teknik Anadolu Lisesi öğrencisi. Yazılım geliştirme, staj ve teknoloji üzerine kişisel portfolio sitesi." />
+  <meta name="keywords" content="Yusuf Akar, portfolio, staj, yazılım, Gaziantep, 19 Mayıs Mesleki Teknik" />
+  <meta name="author" content="Yusuf Akar" />
+  <meta property="og:title" content="Yusuf Akar | Portfolio" />
+  <meta property="og:description" content="Genç yazılım geliştirici ve teknoloji meraklısı." />
+  <title>Yusuf Akar | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLES BACKGROUND ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text">YA</div>
+      <div class="loader-bar"><div class="loader-progress" id="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-logo">YA</span>
+      <span class="brand-name">Yusuf Akar</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menüyü aç/kapat">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero"     class="nav-link" data-section="hero">Anasayfa</a></li>
+      <li><a href="#about"    class="nav-link" data-section="about">Hakkımda</a></li>
+      <li><a href="#skills"   class="nav-link" data-section="skills">Yetenekler</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projeler</a></li>
+      <li><a href="#education"class="nav-link" data-section="education">Eğitim</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Staj Arıyor · 2025
+      </div>
+      <h1 class="hero-title">
+        Merhaba, ben<br />
+        <span class="gradient-text">Yusuf Akar</span>
+      </h1>
+      <p class="hero-subtitle">
+        <span class="typewriter" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        Gaziantep'ten genç ve hevesli bir teknoloji tutkunu. Kod yazıyorum, 
+        öğreniyorum ve her gün bir adım daha ileri gidiyorum.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="btn-projects">
+          <span>Projelerime Bak</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="btn-contact">
+          <span>İletişime Geç</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value" data-target="18">0</span>
+          <span class="stat-label">Yaşında</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="5">0</span><span class="stat-value-suffix">+</span>
+          <span class="stat-label">Teknoloji</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value" data-target="10">0</span><span class="stat-value-suffix">+</span>
+          <span class="stat-label">Proje</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <img src="assets/avatar.png" alt="Yusuf Akar profil fotoğrafı" class="avatar-img" id="avatar-img" />
+        <div class="avatar-badge-card">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Yazılım Geliştirici</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Aşağı Kaydır</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// hakkımda</span>
+        <h2 class="section-title">Ben Kimim?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card card-glow reveal">
+          <div class="about-card-icon">🎯</div>
+          <h3>Hedefim</h3>
+          <p>Yazılım dünyasında kendimi geliştirerek staj fırsatıyla sektör deneyimi kazanmak ve ileride büyük projelere imza atmak istiyorum.</p>
+        </div>
+        <div class="about-card card-glow reveal" style="--delay: 0.1s">
+          <div class="about-card-icon">💻</div>
+          <h3>Ne Yapıyorum?</h3>
+          <p>Web geliştirme, temel algoritmalar ve yazılım projeleri üzerine çalışıyorum. Her yeni teknolojiye merakla yaklaşıyorum.</p>
+        </div>
+        <div class="about-card card-glow reveal" style="--delay: 0.2s">
+          <div class="about-card-icon">📍</div>
+          <h3>Neredeyim?</h3>
+          <p>Gaziantep/Şahinbey'de yaşıyorum ve 19 Mayıs Mesleki ve Teknik Anadolu Lisesi'nde eğitimime devam ediyorum.</p>
+        </div>
+        <div class="about-card card-glow reveal" style="--delay: 0.3s">
+          <div class="about-card-icon">🚀</div>
+          <h3>Staj Hedefi</h3>
+          <p>2025 yılında yazılım, IT veya teknoloji alanında staj yaparak gerçek dünya deneyimi kazanmak istiyorum.</p>
+        </div>
+      </div>
+      <div class="about-bio reveal">
+        <div class="bio-text">
+          <h3>Kısaca Ben</h3>
+          <p>
+            18 yaşında, teknolojiye tutkuyla bağlı bir lise öğrencisiyim. Gaziantep'in kalbinde, Şahinbey'de büyüdüm ve 
+            kod yazmanın ne kadar güçlü bir araç olduğunu erken keşfettim. 
+          </p>
+          <p>
+            <strong>19 Mayıs Mesleki ve Teknik Anadolu Lisesi</strong>'nde aldığım eğitim, bana teknik temeller ve 
+            problem çözme yeteneği kazandırdı. Şu an yazılım geliştirmeye odaklanıyor, her gün yeni şeyler öğrenmeye çalışıyorum.
+          </p>
+          <p>
+            Seneye staja başlamayı hedefliyorum. Ekip çalışmasına yatkın, öğrenmeye açık ve kararlı bir stajyer olarak 
+            değer katabileceğimi düşünüyorum.
+          </p>
+          <div class="bio-tags">
+            <span class="bio-tag">🎮 Oyun Oynamayı Sever</span>
+            <span class="bio-tag">📚 Sürekli Öğrenir</span>
+            <span class="bio-tag">🤝 Takım Oyuncusu</span>
+            <span class="bio-tag">🔥 Motive</span>
+          </div>
+        </div>
+        <div class="bio-info-card">
+          <div class="info-row">
+            <span class="info-label">Ad Soyad</span>
+            <span class="info-value">Yusuf Akar</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Yaş</span>
+            <span class="info-value">18</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Şehir</span>
+            <span class="info-value">Gaziantep / Şahinbey</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Okul</span>
+            <span class="info-value">19 Mayıs MTAL</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Staj Durumu</span>
+            <span class="info-value available">Müsait ✓</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Dil</span>
+            <span class="info-value">Türkçe (Anadil)</span>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-sm" id="btn-hire">İletişime Geç</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// yetenekler</span>
+        <h2 class="section-title">Neler Biliyorum?</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="skills-column reveal">
+          <h3 class="skills-col-title">Teknik Yetenekler</h3>
+          <div class="skill-item" data-skill="HTML / CSS" data-level="85">
+            <div class="skill-header">
+              <span class="skill-icon">🌐</span>
+              <span class="skill-name">HTML / CSS</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--target: 85%"></div></div>
+          </div>
+          <div class="skill-item" data-skill="JavaScript" data-level="70">
+            <div class="skill-header">
+              <span class="skill-icon">⚡</span>
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--target: 70%"></div></div>
+          </div>
+          <div class="skill-item" data-skill="Python" data-level="65">
+            <div class="skill-header">
+              <span class="skill-icon">🐍</span>
+              <span class="skill-name">Python</span>
+              <span class="skill-pct">65%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--target: 65%"></div></div>
+          </div>
+          <div class="skill-item" data-skill="Git & GitHub" data-level="60">
+            <div class="skill-header">
+              <span class="skill-icon">🔧</span>
+              <span class="skill-name">Git & GitHub</span>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--target: 60%"></div></div>
+          </div>
+          <div class="skill-item" data-skill="SQL / Veritabanı" data-level="55">
+            <div class="skill-header">
+              <span class="skill-icon">🗄️</span>
+              <span class="skill-name">SQL / Veritabanı</span>
+              <span class="skill-pct">55%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill" style="--target: 55%"></div></div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-column reveal" style="--delay: 0.2s">
+          <h3 class="skills-col-title">Kişisel Yetenekler</h3>
+          <div class="soft-skills-grid">
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">🧠</div>
+              <div class="soft-skill-label">Problem Çözme</div>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">🤝</div>
+              <div class="soft-skill-label">Takım Çalışması</div>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">📖</div>
+              <div class="soft-skill-label">Hızlı Öğrenme</div>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">🎯</div>
+              <div class="soft-skill-label">Odaklanma</div>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">💬</div>
+              <div class="soft-skill-label">İletişim</div>
+            </div>
+            <div class="soft-skill-card">
+              <div class="soft-skill-icon">⏰</div>
+              <div class="soft-skill-label">Zaman Yönetimi</div>
+            </div>
+          </div>
+          <!-- Tech Icons -->
+          <h3 class="skills-col-title" style="margin-top: 2rem;">Araçlar & Teknolojiler</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">Chrome DevTools</span>
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">Linux (Temel)</span>
+            <span class="tech-tag">Windows</span>
+            <span class="tech-tag">Responsive Design</span>
+            <span class="tech-tag">API (Temel)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// projeler</span>
+        <h2 class="section-title">Projelerim</h2>
+        <p class="section-desc">Yaptığım ve üzerinde çalıştığım projeler. Her proje yeni bir öğrenme fırsatı!</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal" id="project-portfolio">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🌐</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="GitHub linki">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link project-link-live" title="Canlı Demo" aria-label="Canlı demo linki">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Kişisel Portfolio Sitesi</h3>
+          <p class="project-desc">HTML, CSS ve JavaScript kullanılarak sıfırdan geliştirilen bu portfolio sitesi. Animasyonlar, responsive tasarım ve modern UI elementleri içeriyor.</p>
+          <div class="project-tags">
+            <span class="p-tag">HTML</span>
+            <span class="p-tag">CSS</span>
+            <span class="p-tag">JavaScript</span>
+          </div>
+          <div class="project-status completed">✅ Tamamlandı</div>
+        </div>
+
+        <div class="project-card reveal" style="--delay: 0.1s" id="project-todo">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">✅</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="GitHub linki">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Görev Takip Uygulaması</h3>
+          <p class="project-desc">LocalStorage kullanan, görev ekleme/silme/tamamlama özellikleri olan basit ama işlevsel bir to-do list uygulaması.</p>
+          <div class="project-tags">
+            <span class="p-tag">JavaScript</span>
+            <span class="p-tag">LocalStorage</span>
+            <span class="p-tag">CSS</span>
+          </div>
+          <div class="project-status completed">✅ Tamamlandı</div>
+        </div>
+
+        <div class="project-card reveal" style="--delay: 0.2s" id="project-weather">
+          <div class="project-card-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🌤️</div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub" aria-label="GitHub linki">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Hava Durumu Uygulaması</h3>
+          <p class="project-desc">OpenWeather API kullanarak şehir bazlı anlık hava durumu bilgisi sunan web uygulaması. Python ile backend desteği.</p>
+          <div class="project-tags">
+            <span class="p-tag">Python</span>
+            <span class="p-tag">API</span>
+            <span class="p-tag">HTML</span>
+          </div>
+          <div class="project-status inprogress">🔧 Geliştiriliyor</div>
+        </div>
+
+        <div class="project-card reveal add-project-card" style="--delay: 0.3s" id="project-add">
+          <div class="add-project-inner">
+            <div class="add-icon">+</div>
+            <p>Yeni projeler yakında eklenecek!</p>
+            <span>Sürekli öğreniyor ve geliştiriyorum 🚀</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// eğitim</span>
+        <h2 class="section-title">Eğitim Hayatım</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" id="edu-highschool">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-card card-glow">
+            <div class="timeline-period active-badge">Devam Ediyor</div>
+            <h3>19 Mayıs Mesleki ve Teknik Anadolu Lisesi</h3>
+            <span class="timeline-sub">Gaziantep · 2021 – 2025</span>
+            <p>Meslek lisesinde teknik eğitim alarak yazılım, donanım ve bilişim teknolojileri alanlarında teorik ve pratik bilgi ediniyorum.</p>
+            <div class="timeline-tags">
+              <span class="tl-tag">Bilişim Teknolojileri</span>
+              <span class="tl-tag">Yazılım Geliştirme</span>
+              <span class="tl-tag">Ağ Sistemleri</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" style="--delay: 0.15s" id="edu-cert1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card-glow">
+            <div class="timeline-period">2024</div>
+            <h3>Web Geliştirme Temelleri</h3>
+            <span class="timeline-sub">Online Eğitim · Kendi Kendine</span>
+            <p>HTML, CSS ve JavaScript temellerini kapsamlı kaynaklardan öğrenerek web geliştirme yolculuğuma başladım.</p>
+            <div class="timeline-tags">
+              <span class="tl-tag">HTML5</span>
+              <span class="tl-tag">CSS3</span>
+              <span class="tl-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" style="--delay: 0.3s" id="edu-cert2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card card-glow">
+            <div class="timeline-period">2023</div>
+            <h3>Python Programlama</h3>
+            <span class="timeline-sub">Online Kurs · Udemy</span>
+            <p>Python dilinin temellerini öğrenerek algoritma ve veri yapıları konularında kendimi geliştirdim.</p>
+            <div class="timeline-tags">
+              <span class="tl-tag">Python</span>
+              <span class="tl-tag">Algoritmalar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal future" style="--delay: 0.45s" id="edu-internship">
+          <div class="timeline-dot future-dot"></div>
+          <div class="timeline-card card-glow future-card">
+            <div class="timeline-period future-badge">🎯 Hedef · 2025</div>
+            <h3>Staj</h3>
+            <span class="timeline-sub">Yazılım / IT Firması</span>
+            <p>2025 yılında bir yazılım veya teknoloji firmasında staj yaparak gerçek dünya deneyimi kazanmayı hedefliyorum.</p>
+            <div class="timeline-tags">
+              <span class="tl-tag">Yazılım Geliştirme</span>
+              <span class="tl-tag">Takım Çalışması</span>
+              <span class="tl-tag">Sektör Deneyimi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// iletişim</span>
+        <h2 class="section-title">İletişime Geç</h2>
+        <p class="section-desc">Staj fırsatları, proje iş birlikleri veya sadece merhaba demek için bana ulaşabilirsin!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card card-glow" id="contact-email">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <span class="contact-type">E-Posta</span>
+              <span class="contact-value">yusuf@example.com</span>
+            </div>
+          </div>
+          <div class="contact-card card-glow" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span class="contact-type">Konum</span>
+              <span class="contact-value">Gaziantep / Şahinbey</span>
+            </div>
+          </div>
+          <div class="contact-card card-glow" id="contact-github">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-type">GitHub</span>
+              <span class="contact-value">github.com/yusufahar</span>
+            </div>
+          </div>
+          <div class="contact-card card-glow" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div class="contact-detail">
+              <span class="contact-type">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/yusufahar</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" style="--delay: 0.15s">
+          <div class="form-group">
+            <label for="form-name">Ad Soyad</label>
+            <input type="text" id="form-name" name="name" placeholder="Adınız Soyadınız" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">E-Posta</label>
+            <input type="email" id="form-email" name="email" placeholder="email@ornek.com" required />
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Konu</label>
+            <select id="form-subject" name="subject">
+              <option value="">Konu Seçin...</option>
+              <option value="staj">Staj Teklifi</option>
+              <option value="proje">Proje İş Birliği</option>
+              <option value="genel">Genel</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="form-message">Mesaj</label>
+            <textarea id="form-message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="btn-send">
+            <span>Mesaj Gönder</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="form-success">
+            <span>🎉 Mesajın alındı! En kısa sürede dönüş yapacağım.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-logo">YA</span>
+          <span>Yusuf Akar</span>
+        </div>
+        <p class="footer-text">
+          Gaziantep'ten ❤️ ile yapıldı &nbsp;·&nbsp; 2025 © Yusuf Akar
+        </p>
+        <div class="footer-links">
+          <a href="#hero"   id="footer-home">Anasayfa</a>
+          <a href="#about"  id="footer-about">Hakkımda</a>
+          <a href="#contact"id="footer-contact">İletişim</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
