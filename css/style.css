@@ -5,15 +5,15 @@
 
 /* ——— CSS Variables ——— */
 :root {
-  --bg-primary:   #07080f;
-  --bg-secondary: #0d0f1a;
-  --bg-card:      #111325;
-  --bg-card-hover:#161934;
+  --bg-primary:   #05050a;
+  --bg-secondary: #0a0b14;
+  --bg-card:      #111222;
+  --bg-card-hover:#17182d;
 
-  --accent:       #6c63ff;
-  --accent-2:     #a78bfa;
-  --accent-3:     #38bdf8;
-  --accent-glow:  rgba(108, 99, 255, 0.35);
+  --accent:       #8b5cf6;
+  --accent-2:     #ec4899;
+  --accent-3:     #06b6d4;
+  --accent-glow:  rgba(236, 72, 153, 0.45);
 
   --text-primary: #f0f2ff;
   --text-secondary:#a0aac0;
