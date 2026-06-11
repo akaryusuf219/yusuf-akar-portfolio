@@ -279,22 +279,20 @@ function triggerHeroAnimations() {
 (function initContactForm() {
   const form    = $('#contact-form');
   const success = $('#form-success');
-  if (!form) return;
+  if (!form || !success) return;
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
+  // Check if URL has ?success=true
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    success.classList.add('show');
+    // Remove the query param without reloading
+    window.history.replaceState({}, document.title, window.location.pathname);
+    setTimeout(() => success.classList.remove('show'), 5000);
+  }
 
+  form.addEventListener('submit', () => {
     const btn = form.querySelector('button[type="submit"] span');
-    const origText = btn.textContent;
-    btn.textContent = 'Gönderiliyor...';
-
-    // Simulate send (replace with real backend / EmailJS / Formspree)
-    setTimeout(() => {
-      btn.textContent = origText;
-      success.classList.add('show');
-      form.reset();
-      setTimeout(() => success.classList.remove('show'), 5000);
-    }, 1200);
+    if (btn) btn.textContent = 'Gönderiliyor...';
   });
 })();
 
